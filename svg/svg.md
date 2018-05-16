@@ -56,7 +56,7 @@
 <html>
 <body>
 
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg version="1.1">
    <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
 </svg> 
  
@@ -176,17 +176,67 @@
 * 下面的例子创建了一个二次方贝塞尔曲线，A 和 C 分别是起点和终点，B 是控制点：  
 ```
 <svg  version="1.1" height="400" width="450">
-<path id="lineAB" d="M 100 350 l 150 -300" stroke="red" stroke-width="3" fill="none" />
-  <path id="lineBC" d="M 250 50 l 150 300" stroke="red" stroke-width="3" fill="none" />
-  <path d="M 175 200 l 150 0" stroke="green" stroke-width="3" fill="none" />
-  <path d="M 100 350 q 150 -300 300 0" stroke="blue" stroke-width="5" fill="none" />
-  <!-- 标记相关点 -->
-    <circle id="pointA" cx="100" cy="350" r="5" />
-    <circle id="pointB" cx="250" cy="50" r="5" />
-    <circle id="pointC" cx="400" cy="350" r="5" />
-  <!-- 标注要点 -->
-    <text x="100" y="350" dx="-30" font-size="30"> A</text>
-    <text x="250" y="50"  dy="-10" font-size="30">B</text>
-    <text x="400" y="350" dx="30" font-size="30">C</text>
+    <path id="lineAB" d="M 100 350 l 150 -300" stroke="red" stroke-width="3" fill="none" />
+    <path id="lineBC" d="M 250 50 l 150 300" stroke="red" stroke-width="3" fill="none" />
+    <path d="M 175 200 l 150 0" stroke="green" stroke-width="3" fill="none" />
+    <path d="M 100 350 q 150 -300 300 0" stroke="blue" stroke-width="5" fill="none" />
+<!-- 标记相关点 -->
+  <circle id="pointA" cx="100" cy="350" r="5" />
+  <circle id="pointB" cx="250" cy="50" r="5" />
+  <circle id="pointC" cx="400" cy="350" r="5" />
+<!-- 标注要点 -->
+  <text x="100" y="350" dx="-30" font-size="30"> A</text>
+  <text x="250" y="50"  dy="-10" font-size="30">B</text>
+  <text x="400" y="350" dx="30" font-size="30">C</text>
+</svg>
+```    
+# SVG 文本 - 《text》    
+《text》 元素用于定义文本。  
+```
+<svg   version="1.1">
+  <text x="0" y="15" fill="red">I love SVG</text>
+</svg>
+```
+# SVG Stroke 属性  
+* stroke
+* stroke-width
+* stroke-linecap
+* stroke-dasharray  
+## Stroke属性定义一条线，文本或元素轮廓颜色： 
+``` 
+<svg  version="1.1">
+    <path stroke="red" d="M5 20 l215 0" />
+    <path stroke="blue" d="M5 40 l215 0" />
+    <path stroke="black" d="M5 60 l215 0" />
 </svg>
 ```  
+## stroke-width 属性 定义了一条线，文本或元素轮廓厚度  
+```
+<svg   version="1.1">
+  <g fill="none" stroke="black">
+    <path stroke-width="2" d="M5 20 l215 0" />
+    <path stroke-width="4" d="M5 40 l215 0" />
+    <path stroke-width="6" d="M5 60 l215 0" />
+  </g>
+</svg>
+```  
+## stroke-linecap属性定义不同类型的开放路径的终结：  
+```
+<svg   version="1.1">
+  <g fill="none" stroke="black" stroke-width="6">
+    <path stroke-linecap="butt" d="M5 20 l215 0" />
+    <path stroke-linecap="round" d="M5 40 l215 0" />
+    <path stroke-linecap="square" d="M5 60 l215 0" />
+  </g>
+</svg>
+```
+## stroke-dasharray属性用于创建虚线：  
+```
+<svg version="1.1">
+  <g fill="none" stroke="black" stroke-width="4">
+    <path stroke-dasharray="5,5" d="M5 20 l215 0" />
+    <path stroke-dasharray="10,10" d="M5 40 l215 0" />
+    <path stroke-dasharray="20,10,5,5,5,10" d="M5 60 l215 0" />
+  </g>
+</svg>
+```

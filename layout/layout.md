@@ -1,32 +1,6 @@
-# 前端页面布局  
-  网页布局一直是个比较重要的问题。但实际上，在网页开发很长的一段时间当中，我们甚至没有一个比较完整的布局模块。总的来说 Web 布局经历了以下几个阶段或几种方式：  
-## table布局 ： table，通过 Dreamweaver 拖拽表格或者手写 table 标签布局  
-* 优点：  
- 1、在某些场合，使用Table是100%的适合、恰当和正确。比如，用table做表格是完全正确的。 
-* 缺点：  
-1、Table要比其它html标记占更多的字节。(延迟下载时间，占用服务器更多的流量资源。)  
-2、Table会阻挡浏览器渲染引擎的渲染顺序。(会延迟页面的生成速度，让用户等待更久的时间。) 
-## div+css布局 ： 借助元素元素盒模型本身的特性以及 float position 等属性等进行布局  
-* 优点：  
-1、符合W3C标准。这保证您的网站不会因为将来网络应用的升级而被淘汰。  
-2、搜索引擎更加友好。相对与传统的table,
-采用DIV+CSS技术的网页，由于将大部分的HTML代码和内容样式写入了CSS文件中，这就使得网页中代码更加简洁，正文部分更为突出明显，便于被搜索引擎采集收录。
-* 缺点：  
-1、对于CSS的高度依赖使得网页设计变得比较复杂。相对于HTML4.0中的表格布局（table），CSS+DIV尽管不是高不可及，但至少要比表格定位复杂的多  
-2、CSS文件异常将影响整个网站的正常浏览。CSS网站制作的设计元素通常放在一个或几个外部文件中，这些文件有可能相当复杂，甚至比较庞大，如果CSS文件调用出现异常，那么整个网站将变得惨不忍睹。
-## flex弹性盒子布局 ： 革命性的突破是目前最为成熟和强大的布局方案。  
-* 优点：  
-1、解决传统布局方案上的三大痛点 排列方向、对齐方式，自适应尺寸。
-* 缺点：  
-1、PC兼容性相对较差，IE要10，甚至11以上才有很好的兼容  
-## 响应式布局 ： 这个布局系统提供了一套响应式的布局解决方案。
-* 优点：  
-1、方便改动，响应式设计是针对页面的，可以只对必要的页面进行改动，其他页面不受影响。  
-2、跨平台：在手机，pad，电脑上均有不错的表现
-* 缺点：  
-1、页面会比较大，在当前国内渣渣2G，3G网络下打开速度会比较慢
----    
-```
+# 前端页面布局    
+![layout](./layout.png)
+```  
     <style>
         div{
             font-size: 20px;
@@ -86,6 +60,35 @@
     <div class="footer">页脚</div>
 ```  
 
+  网页布局一直是个比较重要的问题。但实际上，在网页开发很长的一段时间当中，我们甚至没有一个比较完整的布局模块。总的来说 Web 布局经历了以下几个阶段或几种方式：    
+## table布局 ： table，通过 Dreamweaver 拖拽表格或者手写 table 标签布局  
+* 优点：  
+ 1、在某些场合，使用Table是100%的适合、恰当和正确。比如，用table做表格是完全正确的。 
+* 缺点：  
+1、Table要比其它html标记占更多的字节。(延迟下载时间，占用服务器更多的流量资源。)  
+2、Table会阻挡浏览器渲染引擎的渲染顺序。(会延迟页面的生成速度，让用户等待更久的时间。) 
+## div+css布局 ： 借助元素元素盒模型本身的特性以及 float position 等属性等进行布局  
+* 优点：  
+1、符合W3C标准。这保证您的网站不会因为将来网络应用的升级而被淘汰。  
+2、搜索引擎更加友好。相对与传统的table,
+采用DIV+CSS技术的网页，由于将大部分的HTML代码和内容样式写入了CSS文件中，这就使得网页中代码更加简洁，正文部分更为突出明显，便于被搜索引擎采集收录。
+* 缺点：  
+1、对于CSS的高度依赖使得网页设计变得比较复杂。相对于HTML4.0中的表格布局（table），CSS+DIV尽管不是高不可及，但至少要比表格定位复杂的多  
+2、CSS文件异常将影响整个网站的正常浏览。CSS网站制作的设计元素通常放在一个或几个外部文件中，这些文件有可能相当复杂，甚至比较庞大，如果CSS文件调用出现异常，那么整个网站将变得惨不忍睹。
+## flex弹性盒子布局 ： 革命性的突破是目前最为成熟和强大的布局方案。  
+* 优点：  
+1、解决传统布局方案上的三大痛点 排列方向、对齐方式，自适应尺寸。
+* 缺点：  
+1、PC兼容性相对较差，IE要10，甚至11以上才有很好的兼容  
+## 响应式布局 ： 这个布局系统提供了一套响应式的布局解决方案。
+* 优点：  
+1、方便改动，响应式设计是针对页面的，可以只对必要的页面进行改动，其他页面不受影响。  
+2、跨平台：在手机，pad，电脑上均有不错的表现
+* 缺点：  
+1、页面会比较大，在当前国内渣渣2G，3G网络下打开速度会比较慢
+---    
+
+
 # 弹性布局  
 ## 弹性布局 : 弹性布局，是一种布局方式，主要是解决某元素中"子元素"的布局方式，为布局提供了最大的灵活性。  
 * 主轴  
@@ -104,7 +107,7 @@
 属性：display  
 取值:  
 1.flex 将块级元素变为容器  
-2.inline-flex 将行内元素变为容器（较少)    
+2.inline-flex 将行内元素变为容器   
 注意 :  
 1.元素设置为容器之后，子元素的float,clear,vertical-align将失效  
 2.元素设置为flex容器之后，子元素的尺寸允许被修改  
@@ -113,15 +116,13 @@
 <style> 
 .container {
     display: flex;
-    width: 400px;
-    height: 250px;
+    width: 400px; height: 250px;
     background-color: lightgrey;
 }
 
 .item {
     background-color: cornflowerblue;
-    width: 100px;
-    height: 100px;
+    width: 100px; height: 100px;
     margin: 10px;
 }
 </style>
@@ -140,25 +141,21 @@
 作用：指定容器的主轴及其排列方向  
 取值：  
 row 默认值，即主轴为x轴，起点在左端  
-row-reverse 即主轴为x轴,起点在右端 
-column 主轴为y轴，起点在顶端  
+row-reverse 即主轴为x轴,起点在右端   
+column 主轴为y轴，起点在顶端    
 column-reverse 主轴为y轴，起点在底端  
 ```
 <style> 
 .flex-container {
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: row-reverse;
     flex-direction: row-reverse;
-    width: 400px;
-    height: 250px;
+    width: 400px; height: 250px;
     background-color: lightgrey;
 }
 
 .flex-item {
     background-color: cornflowerblue;
-    width: 100px;
-    height: 100px;
+    width: 100px; height: 100px;
     margin: 10px;
 }
 </style>
@@ -183,15 +180,13 @@ wrap-reverse:换行反转
 .flex-container {
     display: flex;
     flex-wrap: nowrap;
-    width: 300px;
-    height: 250px;
+    width: 300px; height: 250px;
     background-color: lightgrey;
 }
 
 .flex-item {
     background-color: cornflowerblue;
-    width: 100px;
-    height: 100px;
+    width: 100px; height: 100px;
     margin: 10px;
 }
 </style>
@@ -206,10 +201,36 @@ wrap-reverse:换行反转
 ```
 
 * 3.flex-flow  
-作用：是flex-direction与flex-wrap的缩写形式  
+作用：是flex-direction与flex-wrap的缩写形式     
 取值：  
-1.row nowrap 默认值  
-2.direction wrap  
+row 默认值，即主轴为x轴，起点在左端  
+row-reverse 即主轴为x轴,起点在右端  
+column 主轴为y轴，起点在顶端  
+column-reverse 主轴为y轴，起点在底端     
+```
+<style> 
+.flex-container {
+    display: flex;
+    flex-flow: row-reverse;
+    width: 400px; height: 250px;
+    background-color: lightgrey;
+}
+
+.flex-item {
+    background-color: cornflowerblue;
+    width: 100px; height: 100px;
+    margin: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="flex-container">
+  <div class="flex-item">flex item 1</div>
+  <div class="flex-item">flex item 2</div>
+  <div class="flex-item">flex item 3</div>  
+</div>
+```
 
 * 4.justify-content(必须)  
 作用：定义项目在主轴上的对齐方式  
@@ -260,8 +281,7 @@ wrap-reverse:换行反转
             .flex-container {
                 display: flex;
                 align-items:stretch ;
-                width: 400px;
-                height: 250px;
+                width: 400px; height: 250px;
                 background-color: lightgrey;
             }
             
@@ -290,15 +310,13 @@ wrap-reverse:换行反转
 <style> 
 .flex-container {
     display: flex;
-    width: 400px;
-    height: 250px;
+    width: 400px; height: 250px;
     background-color: lightgrey;
 }
 
 .flex-item {
     background-color: cornflowerblue;
-    width: 100px;
-    height: 100px;
+    width: 100px; height: 100px;
     margin: 10px;
 }
 
@@ -333,16 +351,14 @@ wrap-reverse:换行反转
           1.flex-start : 弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴起始边界。  
           2.flex-end : 弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴结束边界  
           3.center 弹性盒子元素在该行的侧轴（纵轴）上居中放置。  
-          4.baseline  如弹性盒子元素的行内轴与侧轴为同一条，则该值与'flex-start'等效。其它情况下，该值将参与基线对齐。  
-          5.stretch  如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照'min/max-width/height'属性的限制。  
+          4.baseline  如弹性盒子元素的行内轴与侧轴为同一条。其它情况下，该值将参与基线对齐。  
+          5.stretch  如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸  
           6.auto 继承自父元素的align-items的对齐方式   
 ```
 <style> 
 .flex-container {
-    display: -webkit-flex;
     display: flex;
-    width: 400px;
-    height: 250px;
+    width: 400px; height: 250px;
     background-color: lightgrey;
 }
 
@@ -354,26 +370,21 @@ wrap-reverse:换行反转
 }
 
 .item1 {
-    -webkit-align-self: flex-start;
     align-self: flex-start;
 }
 .item2 {
-    -webkit-align-self: flex-end;
     align-self: flex-end;
 }
 
 .item3 {
-    -webkit-align-self: center;
     align-self: center;
 }
 
 .item4 {
-    -webkit-align-self: baseline;
     align-self: baseline;
 }
 
 .item5 {
-    -webkit-align-self: stretch;
     align-self: stretch;
 }
 </style>
@@ -390,6 +401,7 @@ wrap-reverse:换行反转
 
 ```
 # display: box;  
+display:flex;和display:box  
 前者是flex 2012年的语法，也将是以后标准的语法，大部分浏览器已经实现了无前缀版本。  
 后者是2009年的语法，已经过时，是需要加上对应前缀的。  
 所以兼容性的代码，大致如下   
@@ -421,8 +433,7 @@ reverse	以反方向显示子元素。
 <style> 
 div
 {
-	width:350px;
-	height:100px;
+	width:350px; height:100px;
 	border:1px solid black;
  
 	display:-webkit-box;
@@ -451,8 +462,7 @@ stretch : 子元素拉伸以填充包含区块
     <style> 
 div
 {
-	width:350px;
-	height:100px;
+	width:350px;	height:100px;
 	border:1px solid black;
  
 	display:-webkit-box;
